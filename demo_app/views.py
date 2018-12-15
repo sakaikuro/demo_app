@@ -22,7 +22,8 @@ from sklearn.externals import joblib
 import numpy as np
 
 # モデルの読み込み
-loaded_model = joblib.load('demo_app/demo_model.pkl')
+# loaded_model = joblib.load('demo_app/demo_model.pkl')
+loaded_model = joblib.load('/home/kurotsrrkk0513/kurotsrrkk0513.pythonanywhere.com/demo_app/demo_model.pkl') # PythonAnywhereの環境にあわせたパスに変更
 
 # -------- #
 def result(request):
