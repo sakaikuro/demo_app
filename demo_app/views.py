@@ -50,7 +50,7 @@ def result(request):
 
     # 推論結果を保存
     _customer = Customers.objects.order_by('id').reverse()[0] # Customerの切り出し
-    _customer.proba = _y_proba[0][y[0]]
+    _customer.proba = y_proba[0][y[0]]
     _customer.result = y[0]
     _customer.comment = comment
     _customer.save() # データを保存
