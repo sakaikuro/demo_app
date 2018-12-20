@@ -26,3 +26,17 @@ class InputForm(forms.ModelForm):
         'last_name' : forms.TextInput(attrs={'placeholder':'last_name'}),
         'first_name' : forms.TextInput(attrs={'placeholder':'first_name'}),
         }
+
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+
+#-- 省略 --#
+
+class SignUpForm(UserCreationForm):
+    first_name = forms.CharField(max_length=30, required=True, help_text='名字を入力')
+    last_name = forms.CharField(max_length=30, required=True, help_text='名前を入力')
+    email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
+
+    class Meta:
+        model = User
+        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2', )
