@@ -9,7 +9,7 @@ import pandas as pd
 import json
 
 # loaded_model = joblib.load('demo_app/demo_model.pkl')
-loaded_model = joblib.load('demo_app/demo_model.pkl')
+loaded_model = joblib.load('/home/kurotsrrkk0513/kurotsrrkk0513.pythonanywhere.com/demo_app/demo_model.pkl')
 
 @login_required # 追加
 def index(request):
